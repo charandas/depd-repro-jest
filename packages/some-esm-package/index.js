@@ -1,3 +1,6 @@
-require = require('esm')(module) // eslint-disable-line no-global-assign
+require = require('esm')(module, {
+  debug: true,
+  sourceMap: true
+})
 
 module.exports = require('./main')
