@@ -1,0 +1,60 @@
+{
+  "name": "depd-repro-jest",
+  "version": "1.0.0",
+  "description": "Reproduce the invalid stackframe issue in depd when using sequelize in jest context",
+  "main": "index.js",
+  "scripts": {
+    "jest": "jest",
+    "test": "npm run jest"
+  },
+  "dependencies": {
+    "sequelize": "^4.20.1",
+    "typescript": "^3.0.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^21.1.5",
+    "@types/jest-matchers": "^20.0.0",
+    "@types/node": "^8.0.47",
+    "jest": "^21.2.1",
+    "ts-jest": "^21.1.4",
+    "tslint": "^5.8.0",
+    "tslint-config-standard": "^6.0.1"
+  },
+  "jest": {
+    "globals": {
+      "ts-jest": {
+        "skipBabel": true
+      }
+    },
+    "modulePaths": [
+      "<rootDir>/**/node_modules"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "\\.spec\\.(ts|js)x?$",
+    "testEnvironment": "node",
+    "collectCoverage": false,
+    "collectCoverageFrom": [
+      "lib/**/*.{js,ts}",
+      "!**/*.spec.{js,ts}",
+      "!**/node_modules/**",
+      "!**/test/**"
+    ],
+    "coverageDirectory": "<rootDir>/test/coverage-jest",
+    "coverageReporters": [
+      "json",
+      "lcov",
+      "text",
+      "html"
+    ],
+    "mapCoverage": true
+  },
+  "author": "Charandas Batra",
+  "license": "MIT"
+}
