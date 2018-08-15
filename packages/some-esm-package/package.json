@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "esm": "^3.0.76",
+    "esm": "https://github.com/standard-things/esm.git#c464c35",
     "sequelize": "^4.38.0"
   },
   "esm": {
