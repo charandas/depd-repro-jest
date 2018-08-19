@@ -1,18 +1,11 @@
+import libFn from '../lib'
 import aFn from '../packages/some-esm-package'
+import * as Sequelize from 'sequelize'
 
 describe('test lib', () => {
   test('call fn', () => {
+    console.log(Sequelize.STRING)
     expect(aFn()).toEqual(true)
+    expect(libFn()).toEqual(true)
   })
 })
-
-// produces:
-
-/*
-  ● Test suite failed to run
-
-    /some/dir/depd-repro-jest/packages/some-esm-package/node_modules/depd/index.js:1
-    TypeError: callSite.getFileName is not a function
-
-      at callSiteLocation (packages/some-esm-package/node_modules/depd/index.js:252:23)
-*/

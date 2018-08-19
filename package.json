@@ -8,7 +8,7 @@
     "test": "npm run jest"
   },
   "dependencies": {
-    "sequelize": "^4.20.1",
+    "sequelize": "^4.38.0",
     "typescript": "^3.0.1"
   },
   "devDependencies": {
